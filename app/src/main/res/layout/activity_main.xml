@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="379dp"
+            android:layout_height="310dp"
+            app:layout_constraintBottom_toTopOf="@+id/check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ques">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="choose"
+                android:tag="0"
+                android:text="3"
+                android:textSize="96sp"
+                android:textStyle="bold"
+                app:backgroundTint="#F44336"
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="choose"
+                android:tag="1"
+                android:text="7"
+                android:textColor="#E8DFDF"
+                android:textSize="96sp"
+                android:textStyle="bold"
+                app:backgroundTint="#9C27B0"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="0"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="choose"
+                android:tag="2"
+                android:text="12"
+                android:textSize="96sp"
+                android:textStyle="bold"
+                app:backgroundTint="#673AB7"
+
+                app:layout_column="0"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="choose"
+                android:tag="3"
+                android:text="10"
+                android:textSize="96sp"
+                android:textStyle="bold"
+                app:backgroundTint="#E91E63"
+                app:layout_column="1"
+                app:layout_columnWeight="1"
+                app:layout_gravity="fill"
+                app:layout_row="1"
+                app:layout_rowWeight="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="16dp"
+            android:onClick="playAGAIN"
+            android:text="PLAY AGAIN?"
+            android:textColor="#534F4F"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:backgroundTint="#EDE9E9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="76dp"
+            android:layout_marginRight="76dp"
+            android:background="#E4D971"
+            android:gravity="center"
+            android:text="0/15"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ques"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.653" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="93dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:background="#E3CF24"
+            android:gravity="center"
+            android:text="30s"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ques"
+            app:layout_constraintEnd_toStartOf="@+id/number"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.662" />
+
+        <TextView
+            android:id="@+id/ques"
+            android:layout_width="179dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="112dp"
+            android:background="#2E2D2D"
+            android:gravity="center"
+            android:text="3 + 9"
+            android:textColor="#C58888"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/check"
+            android:layout_width="279dp"
+            android:layout_height="53dp"
+
+            android:layout_marginBottom="16dp"
+            android:background="#F8F7F3"
+            android:gravity="center"
+            android:textColor="#E1497C"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/playButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:onClick="start"
+        android:padding="10dp"
+        android:text="GO!"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:backgroundTint="#34C13A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
